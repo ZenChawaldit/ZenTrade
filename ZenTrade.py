@@ -969,7 +969,7 @@ def startMenuMousePressed(event, data):
 def startMenuRedrawAll(canvas, data):
     canvas.create_rectangle(0, 0, data.width, data.height,\
      fill = data.pistachio)
-    canvas.create_text(data.width//2, data.height//4, text = "StockGenie ( ͡° ͜ʖ ͡°)", fill = "white", font = "Arial 75 bold")
+    canvas.create_text(data.width//2, data.height//4, text = "ZenTrade", fill = "white", font = "Arial 75 bold")
     canvas.create_text(data.width//2, data.height//2, text = "*Disclaimer: This application does not provide direct financial advice, nor does it serve as a brokerage.", fill = "white", font = "Arial 10")
     data.startButtons = []
     data.startButtons.append(SectorButton(data.width//2-200, data.height - 200,"Sector Analysis"))
@@ -1260,7 +1260,7 @@ def chooseSectorRedrawAll(canvas, data):
      data.height, fill = "pink")
     canvas.create_text(25,data.height-25, text="←", font = "Arial 14")
     canvas.create_text(data.width//2,data.margin,\
-     anchor ="center", text = "StockGenie: Choose A Sector To Analyze",\
+     anchor ="center", text = "ZenTrade: Choose A Sector To Analyze",\
       font = "Arial 30 bold underline", fill = "white" )
     drawSectorButtons(data, canvas)
     for button in data.sectorButtons:
