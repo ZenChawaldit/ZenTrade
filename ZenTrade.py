@@ -1,7 +1,7 @@
 ########################################################
 #Citations
 #Run function and mode dispatcher format taken from 15-112 website
-#Ideas/code bits courtesy of https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+#Ideas/code bits courtesy of https://sklearn.org/stable/modules/generated/sklearn.svm.SVC.html
 #Math procedures from https://towardsdatascience.com/understanding-support -vector-machine-
 # part-2-kernel-trick-mercers-theorem-e1e6848c6c4d
 ########################################################
@@ -837,7 +837,7 @@ def init(data):
     data.prevScreen = ""
     data.margin = 60
     data.days = dataDays
-    data.pistachio = rgbString(114, 197, 147)
+    data.Behr = rgbString(170, 186, 176)
     data.blue = rgbString(0,154,20)
     data.sectorButtons = []
     data.energyButtons = []
@@ -968,8 +968,8 @@ def startMenuMousePressed(event, data):
 #draw start streen and 2 buttons
 def startMenuRedrawAll(canvas, data):
     canvas.create_rectangle(0, 0, data.width, data.height,\
-     fill = data.pistachio)
-    canvas.create_text(data.width//2, data.height//4, text = "ZenTrade", fill = "white", font = "Arial 75 bold")
+     fill = data.Behr)
+    canvas.create_text(data.width//2, data.height//4, text = "ZenTrade ", fill = "white", font = "Arial 75 bold")
     canvas.create_text(data.width//2, data.height//2, text = "*Disclaimer: This application does not provide direct financial advice, nor does it serve as a brokerage.", fill = "white", font = "Arial 10")
     data.startButtons = []
     data.startButtons.append(SectorButton(data.width//2-200, data.height - 200,"Sector Analysis"))
@@ -1170,7 +1170,7 @@ class customEntry4(tk.Tk):
 def customPortfolioRedrawAll(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1253,14 +1253,14 @@ def chooseSectorMousePressed(event, data):
 #draw 8 buttons with major sectors
 def chooseSectorRedrawAll(canvas, data):
     canvas.create_rectangle(0,0,data.width, data.height,\
-     fill = data.pistachio)
+     fill = data.Behr)
     backButtonSize = 50
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
     canvas.create_text(25,data.height-25, text="←", font = "Arial 14")
     canvas.create_text(data.width//2,data.margin,\
-     anchor ="center", text = "ZenTrade: Choose A Sector To Analyze",\
+     anchor ="center", text = "StockGenie: Choose A Sector To Analyze",\
       font = "Arial 30 bold underline", fill = "white" )
     drawSectorButtons(data, canvas)
     for button in data.sectorButtons:
@@ -1342,7 +1342,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawEnergyScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1401,7 +1401,7 @@ def infoScreenMousePressed(event, data):
 
 def infoScreenRedrawAll(canvas, data):
     backButtonSize = 50
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
     canvas.create_text(25,data.height - 25, text="←", font = "Arial 14")
@@ -1493,7 +1493,7 @@ def materialsScreenMousePressed(event, data):
 def drawMaterialsScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1587,7 +1587,7 @@ def industrialsScreenMousePressed(event, data):
 def drawIndustrialsScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1704,7 +1704,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawConsumerScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1823,7 +1823,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawHealthCareScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -1940,7 +1940,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawFinancialsScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -2057,7 +2057,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawTechnologyScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -2177,7 +2177,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawTelecomScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -2294,7 +2294,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawUtilitiesScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
@@ -2411,7 +2411,7 @@ def drawHighPriorityIndicators(lst ,data):
 def drawRealEstateScreen(canvas, data):
     backButtonSize = 50
     data.sectorButtons = []
-    canvas.create_rectangle(0,0,data.width, data.height, fill = data.pistachio)
+    canvas.create_rectangle(0,0,data.width, data.height, fill = data.Behr)
     #back button
     canvas.create_rectangle(0, data.height - backButtonSize, backButtonSize,\
      data.height, fill = "pink")
