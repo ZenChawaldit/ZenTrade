@@ -13,14 +13,26 @@ How To Run ZenTrade:
 ######################################################################################################
 Necessary Modules (can be installed through the windows command prompt)
 
+#GIU
 pip install tkinter
+
+#graphics
 pip install matplotlib
+
+#data manipulation & computations
 pip install pandas
 pip install numpy
+
+#finance data source
 pip install quandl
-pip install datetime
-pip install ta
+
+#advanced trading algorithms
 pip install sklearn
+pip install ta
+
+#Others
+pip install datetime
+
 
 Optional: quandl.ApiConfig.api_key = "5hP1qvLqKeLFqAHnA9yG"
 
